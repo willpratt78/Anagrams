@@ -36,4 +36,8 @@ describe('#anagram_checker') do
     inputs = Anagram.new("hello", "goodbye")
     expect(inputs.anagram_checker).to(eq("These two words are neither anagrams nor antigrams"))
   end
+  it('should take The Morse Code and Here come dots! and return please input a real word') do
+    inputs = Anagram.new("The Morse Code pkl", "Here come dots! lkp")
+    expect(inputs.anagram_checker).to(eq("Please input a real word"))
+  end
 end
