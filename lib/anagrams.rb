@@ -10,12 +10,12 @@ class Anagram
 
   def anagram_checker
 
-    input1_lower = @input1.downcase.gsub(/[^a-z ]/, '')
-    input2_lower = @input2.downcase.gsub(/[^a-z ]/, '')
+    input1_lower = @input1.downcase.gsub(/[^a-z\s]/, '')
+    input2_lower = @input2.downcase.gsub(/[^a-z\s]/, '')
 
     input1_chars = input1_lower.chars
     input2_chars = input2_lower.chars
-
+    
     input1_sorter = input1_chars.sort
     input2_sorter = input2_chars.sort
 
@@ -41,7 +41,7 @@ end
     elsif input1_sorter === input2_sorter
       true
     else
-    "These two words are neither anagrams nor antigrams"
+    "These words are neither anagrams nor antigrams"
     end
   end
 end
