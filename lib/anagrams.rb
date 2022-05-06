@@ -21,6 +21,7 @@ class Anagram
 
     input1_vowel_count = 0
     input2_vowel_count = 0
+    
 
 input1_sorter.each do |array_element|
   if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
