@@ -23,15 +23,15 @@ class Anagram
     input1_sorter = input1_chars.sort
     input2_sorter = input2_chars.sort
 
-    input1.each_char do |letter|
+    @input1.each_char do |letter|
       input1_array.push(vowels.include?(letter.downcase))
     end
 
-      input2.each_char do |letter|
-        input2_array.push(vowels.include?(letter.downcase))
-      end
+    @input2.each_char do |letter|
+      input2_array.push(vowels.include?(letter.downcase))
+    end
 
-    if input1_array.length != input2_array.length
+    if  input1_array.count != input2_array.count || input1_array === []
       "Please input a real word"
     elsif (input1_sorter - input2_sorter) === input1_sorter
       "This is an antigram"
