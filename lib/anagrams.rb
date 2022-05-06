@@ -10,8 +10,8 @@ class Anagram
 
   def anagram_checker
 
-    input1_lower = @input1.downcase
-    input2_lower = @input2.downcase
+    input1_lower = @input1.downcase.gsub(/[^a-z ]/, '')
+    input2_lower = @input2.downcase.gsub(/[^a-z ]/, '')
 
     input1_chars = input1_lower.chars
     input2_chars = input2_lower.chars
