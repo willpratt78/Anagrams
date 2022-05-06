@@ -24,4 +24,8 @@ describe('#anagram_checker') do
     inputs = Anagram.new("Tea", "Eat")
     expect(inputs.anagram_checker).to(eq(true))
   end
+  it('should take Tea and dog and return this is an antigram') do
+    inputs = Anagram.new("Tea", "dog")
+    expect(inputs.anagram_checker).to(eq("This is an antigram"))
+  end
 end
