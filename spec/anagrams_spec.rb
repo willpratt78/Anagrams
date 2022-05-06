@@ -28,4 +28,8 @@ describe('#anagram_checker') do
     inputs = Anagram.new("Tea", "dog")
     expect(inputs.anagram_checker).to(eq("This is an antigram"))
   end
+  it('should take The Morse Code and Here come dots! and return this is an antigram') do
+    inputs = Anagram.new("The,!!!!. Morse, Code..!!", "Here come dots!")
+    expect(inputs.anagram_checker).to(eq(true))
+  end
 end

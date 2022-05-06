@@ -38,8 +38,10 @@ end
       "Please input a real word"
     elsif (input1_sorter - input2_sorter) === input1_sorter
       "This is an antigram"
-    else 
+    elsif input1_sorter === input2_sorter
       true
+    else
+    "These two words are neither anagrams nor antigrams"
     end
   end
 end
