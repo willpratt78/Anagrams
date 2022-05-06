@@ -12,16 +12,31 @@ class Anagram
 
     input1_lower = @input1.downcase
     input2_lower = @input2.downcase
-    
+
     input1_chars = input1_lower.chars
     input2_chars = input2_lower.chars
 
     input1_sorter = input1_chars.sort
     input2_sorter = input2_chars.sort
-   
 
+    input1_vowel_count = 0
+    input2_vowel_count = 0
 
-    if input1_sorter === input2_sorter
+input1_sorter.each do |array_element|
+  if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
+    input1_vowel_count += 1
+  end
+end
+
+input2_sorter.each do |array_element|
+  if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
+    input2_vowel_count += 1
+  end
+end
+
+    if input1_vowel_count === 0 || input2_vowel_count === 0
+      "Please input a real word"
+    else input1_sorter === input2_sorter
       true
     end
   end
