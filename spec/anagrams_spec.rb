@@ -32,4 +32,8 @@ describe('#anagram_checker') do
     inputs = Anagram.new("The,!!!!. Morse, Code..!!", "Here come dots!")
     expect(inputs.anagram_checker).to(eq(true))
   end
+  it('should take hello and goodbye and return These two words are neither anagrams nor antigrams') do
+    inputs = Anagram.new("hello", "goodbye")
+    expect(inputs.anagram_checker).to(eq("These two words are neither anagrams nor antigrams"))
+  end
 end
