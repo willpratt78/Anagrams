@@ -2,7 +2,7 @@ class Anagram
 
   attr_accessor(:input1, :input2)
   
-  def initualize(input1, input2)
+  def initialize(input1, input2)
     @input1 = input1
     @input2 = input2
 
