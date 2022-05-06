@@ -13,6 +13,9 @@ class Anagram
     input1_lower = @input1.downcase.gsub(/[^a-z\s]/, '')
     input2_lower = @input2.downcase.gsub(/[^a-z\s]/, '')
 
+    # input1_split = @input1.split(' ')
+    # input2_split = @input2.split(' ')
+
     input1_chars = input1_lower.chars
     input2_chars = input2_lower.chars
     
@@ -21,10 +24,10 @@ class Anagram
 
     input1_vowel_count = 0
     input2_vowel_count = 0
-    
+
 
 input1_sorter.each do |array_element|
-  if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
+  if array_element.include?("a") || array_element.include?("e") || array_element.include?("i") || array_element.include?("o") || array_element.include?("u")
     input1_vowel_count += 1
   end
 end
