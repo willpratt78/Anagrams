@@ -36,7 +36,9 @@ end
 
     if input1_vowel_count === 0 || input2_vowel_count === 0
       "Please input a real word"
-    else input1_sorter === input2_sorter
+    elsif (input1_sorter - input2_sorter) === input1_sorter
+      "This is an antigram"
+    else 
       true
     end
   end
