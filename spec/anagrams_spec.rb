@@ -16,8 +16,12 @@ describe('#anagram_checker') do
     inputs = Anagram.new("Ba", "Ab")
     expect(inputs.anagram_checker).to(eq(true))
   end
-  it('should take wR and rW and return true') do
+  it('should take wR and rW and return please input a real word') do
     inputs = Anagram.new("wR", "rW")
     expect(inputs.anagram_checker).to(eq("Please input a real word"))
+  end
+  it('should take Tea and Eat and return true') do
+    inputs = Anagram.new("Tea", "Eat")
+    expect(inputs.anagram_checker).to(eq(true))
   end
 end
