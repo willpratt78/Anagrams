@@ -3,35 +3,32 @@ class Anagram
   attr_accessor(:input1, :input2)
   
   def initialize(input1, input2)
-    @input1 = input1
-    @input2 = input2
+    @input1 = input1.downcase.gsub(/[^a-z ]/, '')
+    @input2 = input2.downcase.gsub(/[^a-z ]/, '')
 
   end
 
   def anagram_checker
 
-    input1_lower = @input1.downcase.gsub(/[^a-z\s]/, '')
-    input2_lower = @input2.downcase.gsub(/[^a-z\s]/, '')
+    input1_sorter = @input1.chars.sort
+    input2_sorter = @input2.chars.sort
 
-    vowels = ['a','e','i','o','u','y']
-    input1_array = []
-    input2_array = []
+    input1_vowel_count = 0
+    input2_vowel_count = 0
 
-    input1_chars = input1_lower.chars
-    input2_chars = input2_lower.chars
-    
-    input1_sorter = input1_chars.sort
-    input2_sorter = input2_chars.sort
+input1_sorter.each do |array_element|
+  if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
+    input1_vowel_count += 1
+  end
+end
 
-    @input1.each_char do |letter|
-      input1_array.push(vowels.include?(letter.downcase))
-    end
+input2_sorter.each do |array_element|
+  if array_element === "a" || array_element === "e" || array_element === "i" || array_element === "o" || array_element === "u" || array_element === "y"
+    input2_vowel_count += 1
+  end
+end
 
-    @input2.each_char do |letter|
-      input2_array.push(vowels.include?(letter.downcase))
-    end
-
-    if  input1_array.count != input2_array.count || input1_array === []
+    if input1_vowel_count === 0 || input2_vowel_count === 0
       "Please input a real word"
     elsif (input1_sorter - input2_sorter) === input1_sorter
       "This is an antigram"
