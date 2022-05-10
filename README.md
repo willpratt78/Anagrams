@@ -23,7 +23,7 @@ Application will let you input 2 different words and will return weather or not 
 * Open repo in VSC using terminal 
 * Run bundle in terminal
 * In VSC terminal run Ruby script.rb 
-* Follow instruction sin terminal to find allergen list
+* Follow instructions in terminal to find allergen list
 
 ## Known Bugs
 
