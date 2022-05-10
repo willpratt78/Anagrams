@@ -1,6 +1,4 @@
 class Anagram
-
-  attr_accessor(:input1, :input2)
   
   def initialize(input1, input2)
     @input1 = input1.downcase.gsub(/[^a-z ]/, '')
@@ -28,12 +26,12 @@ input2_sorter.each do |array_element|
   end
 end
 
-    if input1_vowel_count === 0 || input2_vowel_count === 0
+    if input1_vowel_count <= 0 || input2_vowel_count <= 0
       "Please input a real word"
     elsif (input1_sorter - input2_sorter) === input1_sorter
       "This is an antigram"
     elsif input1_sorter === input2_sorter
-      true
+      "This is an anagram"
     else
     "These words are neither anagrams nor antigrams"
     end
