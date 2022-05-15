@@ -1,8 +1,8 @@
 class Anagram
   
   def initialize(input1, input2)
-    @input1 = input1.downcase.gsub(/[^a-z ]/, '',)
-    @input2 = input2.downcase.gsub(/[^a-z ]/, '',)
+    @input1 = input1.downcase.gsub(/\W/, '')
+    @input2 = input2.downcase.gsub(/\W/, '')
 
   end
 
