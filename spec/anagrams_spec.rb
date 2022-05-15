@@ -36,6 +36,10 @@ describe('#anagram_checker') do
     inputs = Anagram.new("hello", "goodbye")
     expect(inputs.anagram_checker).to(eq("These words are neither anagrams nor antigrams"))
   end
+  it('should take two anagrams with different amounts of spaces and return this is an anagram') do
+    inputs = Anagram.new("don't anagram", "Not a Grandma")
+    expect(inputs.anagram_checker).to(eq("This is an anagram"))
+  end
   it('should take The Morse Code pkl and Here come dots! lkp and return please input a real word') do
     inputs = Anagram.new("The Morse Code pkl", "Here come dots! lkp")
     expect(inputs.anagram_checker).to(eq("Please input a real word"))

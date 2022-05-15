@@ -1,13 +1,13 @@
 class Anagram
   
   def initialize(input1, input2)
-    @input1 = input1.downcase.gsub(/[^a-z ]/, '')
-    @input2 = input2.downcase.gsub(/[^a-z ]/, '')
+    @input1 = input1.downcase.gsub(/[^a-z ]/, '',)
+    @input2 = input2.downcase.gsub(/[^a-z ]/, '',)
 
   end
 
   def anagram_checker
-
+    
     input1_sorter = @input1.chars.sort
     input2_sorter = @input2.chars.sort
 
