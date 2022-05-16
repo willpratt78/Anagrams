@@ -22,6 +22,7 @@ Application will let you input 2 different words and will return weather or not 
 * Navigete to directory in terminal
 * Open repo in VSC using terminal 
 * Run bundle in terminal
+* In VSC terminal run rspec to show all tests are passing
 * In VSC terminal run Ruby script.rb 
 * Follow instructions in terminal to check if the word is an anagram or antigram
 
